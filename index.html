@@ -43,17 +43,32 @@
       object-position: center center;
     }
 
-    /* Transparentes Logo über dem Kunstwerk */
-    .logo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: min(76%, 620px);
-      height: auto;
-      max-height: 88%;
-      object-fit: contain;
-    }
+/* Logo-Fläche */
+.logo-panel {
+  position: absolute;
+  left: 3.5%;
+  top: 29.5%;
+  width: 51%;
+  padding: 1.5% 2%;
+  background: rgba(0, 0, 0, 0.38);
+}
+
+/* Transparentes Logo */
+.logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Anpassung für Smartphones */
+@media (max-width: 600px) {
+  .logo-panel {
+    left: 3.5%;
+    top: 29.5%;
+    width: 65%;
+    padding: 2% 2.5%;
+  }
+}
 
     /* Weißer Bereich mit den Buttons */
     .links {
@@ -97,14 +112,9 @@
     }
 
     /* Anpassung für Smartphones */
-    @media (max-width: 600px) {
+     @media (max-width: 600px) {
       .hero {
         height: clamp(250px, 72vw, 430px);
-      }
-
-      .logo {
-        width: 88%;
-        max-height: 90%;
       }
 
       .links {
@@ -132,11 +142,13 @@
         alt="Kunstwerk von Danae Milwa"
       >
 
-      <img
-        class="logo"
-        src="logo.png"
-        alt="Danae Milwa – Emotionen in künstlerischen Welten"
-      >
+ <div class="logo-panel">
+        <img
+          class="logo"
+          src="logo.png"
+          alt="Danae Milwa – Emotionen in künstlerischen Welten"
+        >
+      </div>
     </section>
 
     <nav class="links" aria-label="Weitere Seiten">
