@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Danae Milwa – Emotionen in künstlerischen Welten.">
+
+  <title>Danae Milwa | Künstlerin</title>
+
+  <!-- Schriftart Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #FFFFFF;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    /* Bildbereich */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: clamp(280px, 55vw, 650px);
+      overflow: hidden;
+      background: #A1C4C9;
+    }
+
+    .artwork {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    /* Transparentes Logo über dem Kunstwerk */
+    .logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: min(76%, 620px);
+      height: auto;
+      max-height: 88%;
+      object-fit: contain;
+    }
+
+    /* Weißer Bereich mit den Buttons */
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      padding: 42px 24px 55px;
+      background: #FFFFFF;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 390px;
+      min-height: 58px;
+      padding: 16px 24px;
+
+      background: #A1C4C9;
+      color: #FFFFFF;
+
+      font-family: 'Quicksand', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .button:hover {
+      background: #83ADB3;
+      transform: translateY(-2px);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid #526F74;
+      outline-offset: 4px;
+    }
+
+    /* Anpassung für Smartphones */
+    @media (max-width: 600px) {
+      .hero {
+        height: clamp(250px, 72vw, 430px);
+      }
+
+      .logo {
+        width: 88%;
+        max-height: 90%;
+      }
+
+      .links {
+        gap: 15px;
+        padding: 32px 22px 42px;
+      }
+
+      .button {
+        max-width: 100%;
+        min-height: 54px;
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <section class="hero">
+      <img
+        class="artwork"
+        src="kunstwerk.jpg"
+        alt="Kunstwerk von Danae Milwa"
+      >
+
+      <img
+        class="logo"
+        src="logo.png"
+        alt="Danae Milwa – Emotionen in künstlerischen Welten"
+      >
+    </section>
+
+    <nav class="links" aria-label="Weitere Seiten">
+
+      <a
+        class="button"
+        href="https://danae-milwa.jimdofree.com/"
+      >
+        Website
+      </a>
+
+      <a
+        class="button"
+        href="https://www.instagram.com/DEIN-INSTAGRAM-NAME/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+    </nav>
+
+  </main>
+
+</body>
+</html>
